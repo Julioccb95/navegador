@@ -1,0 +1,44 @@
+
+#logo{
+    width: 110px;
+    position: absolute;
+    left: 30px;
+    top: 15px;
+}
+.btn{
+    padding: 7px 15px;
+    margin-top: 10px;
+}
+#main{
+    margin: auto;
+}
+div{
+    display: block;
+}
+#search{
+width: 45%;
+margin: 20px 0px;
+margin-left: 150px;
+height: 33px;
+border-radius: 25px;
+border-color: #CCC;
+padding-left: 15px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.total-results{
+    margin-left: 159px;
+    font-size: 13px;
+}
+
+.result{
+    max-width: 600px;
+    margin-left: 159px;
+}
+.result h3{
+    color: #0086f8;
+    margin-bottom: 4PX;
+}
+

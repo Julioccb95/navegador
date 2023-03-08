@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="main">
+        <img src="img/logo1.png" alt="Logo" id="logo">
+        <input type="text" name="Search" id="searchInput" placeholder="Buscar en la web.">
+        <button class="btn" type="button" onclick="search()">Search</button>
+        <button class="btn" type="button">I'm feeling lucky</button>
+    </div>
+
+    <script>
+        function search(){
+            let textSearch = document.getElementById('searchInput').value;
+            document.location.href = 'results.html?query=' + textSearch;
+        }
+    </script>
+    
+</body>
+</html>

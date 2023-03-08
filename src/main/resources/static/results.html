@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="results.css">
+</head>
+<body>
+
+    <div id="main">
+        <img src="img/logo1.png" alt="Logo" id="logo">
+        <input type="text" name="Search" id="search" placeholder="Buscar en la web.">
+        <hr/>
+        <div id="results">
+            <span class="total-results">Cerca de 3,160,000 resultados (0.37 segundos) </span>
+            <div id="links">
+        </div>
+    </div>
+    </div>
+    <script>
+        let aux = document.location.href.split('?query=');
+        let query = aux[1];
+        document.getElementById("search").value = query;
+
+        fetch('http://localhost:8080/api/search?query=' + query,)
+        .then(response => response.json())
+        .then(json => {
+            let html ='';
+            for(let resultSearch of json){
+                html += getHtmlResultSearch(resultSearch);
+            }
+            document.getElementById("links").outerHTML = html;
+        });
+
+        function getHtmlResultSearch(resultSearch){
+            return `<div class ="result">
+                <h3><a href="${resultSearch.url}" target="blank">${resultSearch.title}</a></h3>
+                <span>${resultSearch.description}</span>
+                </div>`;
+        }
+    </script>
+    
+</body>
+</html>

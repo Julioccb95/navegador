@@ -1,0 +1,26 @@
+
+    #logo{
+        width: 200px;
+        padding: 5px;
+        margin: 15px;
+    }
+    .btn{
+        padding: 7px 15px;
+        margin-top: 10px;
+    }
+    #main{
+        width: 500px;
+        margin: auto;
+    }
+    div{
+        display: block;
+        text-align: center; 
+    }
+    #search{
+    width: 100%;
+    margin: 10px 0px 20px 0px;
+    height: 20px;
+    border-radius: 20px;
+    border-color: #CCC;
+    padding-left: 5px;
+    }
